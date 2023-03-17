@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #AEB6BF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentController">
+    <children>
+        <Label alignment="CENTER" layoutX="315.0" layoutY="14.0" prefHeight="62.0" prefWidth="169.0" style="-fx-font-weight: Bold; -fx-border-color: Black;" text="Appointments">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+        <TableView fx:id="AppointmentsTableView" layoutX="9.0" layoutY="90.0" prefHeight="331.0" prefWidth="781.0">
+            <columns>
+                <TableColumn fx:id="AppointmentIDColumn" prefWidth="96.39999580383301" text="Appointment ID" />
+                <TableColumn fx:id="TitleColumn" prefWidth="37.199974060058594" text="Title" />
+                <TableColumn fx:id="DescriptionColumn" prefWidth="74.60000610351562" text="Description" />
+                <TableColumn fx:id="LocationColumn" prefWidth="72.39999389648438" text="Location" />
+                <TableColumn fx:id="ContactColumn" prefWidth="73.19998168945312" text="Contact" />
+                <TableColumn fx:id="TypeColumn" prefWidth="58.0" text="Type" />
+                <TableColumn fx:id="StartDateTimeColumn" prefWidth="112.59994506835938" text="Start Date/Time" />
+                <TableColumn fx:id="EndDateTimeColumn" prefWidth="127.5999755859375" text="End Date/Time" />
+                <TableColumn fx:id="CustomerIDColumn" prefWidth="78.199951171875" text="Customer ID" />
+                <TableColumn fx:id="UserIDColumn" prefWidth="52.0" text="User ID" />
+            </columns>
+        </TableView>
+        <RadioButton fx:id="AllRadioButton" layoutX="24.0" layoutY="441.0" mnemonicParsing="false" onAction="#FilterHandler" prefHeight="30.0" prefWidth="58.0" selected="true" style="-fx-font-weight: Bold;" text="All">
+         <toggleGroup>
+            <ToggleGroup fx:id="ToggleGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="WeeklyRadioButton" layoutX="82.0" layoutY="441.0" mnemonicParsing="false" onAction="#FilterHandler" prefHeight="30.0" prefWidth="77.0" style="-fx-font-weight: Bold;" text="Weekly" toggleGroup="$ToggleGroup" />
+        <RadioButton fx:id="MonthlyRadioButton" layoutX="160.0" layoutY="441.0" mnemonicParsing="false" onAction="#FilterHandler" prefHeight="30.0" prefWidth="77.0" style="-fx-font-weight: Bold;" text="Monthly" toggleGroup="$ToggleGroup" />
+        <Button fx:id="CreateAppointmentButton" layoutX="238.0" layoutY="436.0" mnemonicParsing="false" onAction="#CreateAppointmentHandler" prefHeight="39.0" prefWidth="155.0" style="-fx-font-weight: Bold; -fx-border-color: Black;" text="CREATE APPOINTMENT" />
+        <Button fx:id="UpdateAppointmentButton" layoutX="407.0" layoutY="436.0" mnemonicParsing="false" onAction="#UpdateAppointmentHandler" prefHeight="39.0" prefWidth="155.0" style="-fx-font-weight: Bold; -fx-border-color: Black;" text="UPDATE APPOINTMENT" />
+        <Button fx:id="DeleteAppointmentButton" layoutX="577.0" layoutY="436.0" mnemonicParsing="false" onAction="#DeleteAppointmentHandler" prefHeight="39.0" prefWidth="155.0" style="-fx-font-weight: Bold; -fx-border-color: Black;" text="DELETE APPOINTMENT" textFill="RED" />
+        <Button fx:id="ReturnButton" alignment="CENTER" layoutX="11.0" layoutY="30.0" mnemonicParsing="false" onAction="#ReturnHandler" prefHeight="30.0" prefWidth="84.0" style="-fx-font-weight: Bold;" text="Return" />
+      <TextField fx:id="SearchTextField" layoutX="498.0" layoutY="25.0" prefHeight="39.0" prefWidth="183.0" promptText="Search" />
+      <Button fx:id="SearchButton" layoutX="693.0" layoutY="25.0" mnemonicParsing="false" onAction="#SearchHandler" prefHeight="39.0" prefWidth="78.0" style="-fx-font-weight: bold;" text="Search" />
+    </children>
+
+</AnchorPane>

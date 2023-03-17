@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #AEB6BF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <children>
+        <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="347.0" prefWidth="557.0">
+            <children>
+                <Label fx:id="AppointmentLabel" alignment="CENTER" layoutX="113.0" layoutY="66.0" prefHeight="94.0" prefWidth="314.0" style="-fx-font-weight: Bold; -fx-border-color: Red;" text="Log In" textAlignment="CENTER">
+               <font>
+                  <Font size="48.0" />
+               </font></Label>
+                <Label fx:id="UsernameLabel" alignment="CENTER" layoutX="170.0" layoutY="176.0" prefHeight="46.0" prefWidth="199.0" style="-fx-font-weight: Bold;" text="Username" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+                <Label fx:id="PasswordLabel" alignment="CENTER" layoutX="170.0" layoutY="270.0" prefHeight="46.0" prefWidth="199.0" style="-fx-font-weight: Bold;" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+                <TextField id="username-text-field" fx:id="UsernameTextField" layoutX="170.0" layoutY="222.0" prefHeight="26.0" prefWidth="199.0" />
+                <TextField id="password-text-field" fx:id="PasswordTextField" layoutX="170.0" layoutY="316.0" prefHeight="26.0" prefWidth="199.0" />
+                <Label fx:id="TimeZoneLabel" layoutX="247.0" layoutY="14.0" prefHeight="18.0" prefWidth="114.0" text="Time Zone:" />
+                <Label fx:id="ErrorMessageLabel" layoutX="252.0" layoutY="143.0" prefHeight="18.0" prefWidth="51.0" />
+                <Button fx:id="LogInButton" alignment="CENTER" layoutX="144.0" layoutY="359.0" mnemonicParsing="false" onAction="#LogInUser" prefHeight="39.0" prefWidth="107.0" style="-fx-font-weight: Bold;" text="Log In" />
+                <Button fx:id="CancelButton" alignment="CENTER" layoutX="279.0" layoutY="359.0" mnemonicParsing="false" onAction="#CancelHandler" prefHeight="39.0" prefWidth="107.0" style="-fx-font-weight: Bold;" text="Cancel" />
+                <Label fx:id="TimeZoneResult" layoutX="359.0" layoutY="14.0" prefHeight="18.0" prefWidth="142.0" text="TimeZone" />
+                <Label fx:id="LocationLabel" layoutX="36.0" layoutY="14.0" prefHeight="18.0" prefWidth="91.0" text="Location:" />
+                <Label fx:id="LocationResult" layoutX="125.0" layoutY="14.0" prefHeight="18.0" prefWidth="122.0" text="Location" />
+            </children>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

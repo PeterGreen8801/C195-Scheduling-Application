@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #AEB6BF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+    <children>
+        <TableView fx:id="CustomerTableView" layoutX="15.0" layoutY="144.0" prefHeight="262.0" prefWidth="619.0">
+            <columns>
+                <TableColumn fx:id="CustomerIDColumn" prefWidth="46.400007247924805" text="ID" />
+                <TableColumn fx:id="NameColumn" prefWidth="139.19998931884766" text="Name" />
+                <TableColumn fx:id="AddressColumn" prefWidth="120.99996948242188" text="Address" />
+                <TableColumn fx:id="PostalCodeColumn" prefWidth="73.39996337890625" text="Postal Code" />
+                <TableColumn fx:id="DivisionColumn" prefWidth="68.20001220703125" text="Division" />
+                <TableColumn fx:id="CountryColumn" prefWidth="49.600006103515625" text="Country" />
+                <TableColumn fx:id="PhoneColumn" prefWidth="128.0" text="Phone" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="253.0" layoutY="22.0" prefHeight="41.0" prefWidth="144.0" style="-fx-font-weight: Bold; -fx-border-color: Black;" text="Customers">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+        <Button fx:id="CreateCustomerButton" alignment="CENTER" layoutX="66.0" layoutY="83.0" mnemonicParsing="false" onAction="#CreateCustomerHandler" prefHeight="34.0" prefWidth="119.0" style="-fx-font-weight: Bold;" text="Create Customer" />
+        <Button fx:id="UpdateCustomerButton" alignment="CENTER" layoutX="265.0" layoutY="83.0" mnemonicParsing="false" onAction="#UpdateCustomerHandler" prefHeight="34.0" prefWidth="119.0" style="-fx-font-weight: Bold;" text="Update Customer" />
+        <Button fx:id="DeleteCustomerButton" alignment="CENTER" layoutX="464.0" layoutY="83.0" mnemonicParsing="false" onAction="#DeleteCustomerHandler" prefHeight="34.0" prefWidth="119.0" style="-fx-font-weight: Bold;" text="Delete Customer" textFill="RED" />
+        <Button fx:id="ReturnButton" alignment="CENTER" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#ReturnHandler" style="-fx-font-weight: bold;" text="Return" />
+      <TextField fx:id="SearchTextField" layoutX="325.0" layoutY="407.0" prefHeight="34.0" prefWidth="168.0" promptText="Search" />
+      <Button fx:id="SearchButton" layoutX="498.0" layoutY="411.0" mnemonicParsing="false" onAction="#SearchHandler" prefHeight="26.0" prefWidth="72.0" text="Search" />
+    </children>
+
+</AnchorPane>
